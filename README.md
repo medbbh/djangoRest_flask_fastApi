@@ -1,60 +1,45 @@
-# Tp DRF, Flask, FastAPI
+# API Gateways Implementation
+*Using DRF, Flask, and FastAPI*
 
-## M'Hamed Babah C18618
-## Elwalde Sidi Med C18614
+## Authors
+- M'Hamed Babah (C18618)
+- Elwalde Sidi Med (C18614)
 
-# Quick guide to run this project successfully : 
+## Setup Instructions
 
-
-## Prerequisites
-
+### Requirements
 - Python 3.12
 - Pipenv
 
-## Setup Steps
-
-1. Install Pipenv if you haven't:
+### Installation
 ```bash
 pip install pipenv
-```
-
-2. Install project dependencies:
-```bash
 pipenv install
-```
-
-3. Activate the virtual environment:
-```bash
 pipenv shell
 ```
 
-## Running the Project
+### Running Services
 
-You need to run these services in separate terminal windows:
-
-1. Start Django REST API first (Main API):
+1. **Django REST API** (Main Service)
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
-This will run on http://127.0.0.1:8000
+→ http://127.0.0.1:8000
 
-2. Start Flask Gateway:
-   go to flask directory and run
+2. **Flask Gateway** (In flask directory)
 ```bash
 python flask_app.py
 ```
-This will run on http://127.0.0.1:5000
+→ http://127.0.0.1:5000
 
-3. Start FastAPI Gateway:
-   go to fastapi directory and run 
+3. **FastAPI Gateway** (In fastapi directory)
 ```bash
 uvicorn fastapi_app:app --reload --port 8002
 ```
-This will run on http://127.0.0.1:8002
+→ http://127.0.0.1:8002
 
-## Access API Documentation
-
-- Flask Swagger docs: http://127.0.0.1:5000/docs
-- FastAPI docs: http://127.0.0.1:8001/docs
+### API Documentation
+- Flask docs: http://127.0.0.1:5000/docs
+- FastAPI docs: http://127.0.0.1:8002/docs
